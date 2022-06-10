@@ -21,8 +21,8 @@ const args = process.argv.slice(2);
 function fIMC (peso, altura) {
     if (!peso || !altura){
         return `Faltan parámetros. 
-        Para ejecutar correctamente el cálculo
-        debe indicar en este orden "peso y altura"`
+Para ejecutar correctamente el cálculo
+debe indicar en este orden "peso(en kg) y altura(en cm)"`
     }
 
     let imc = (peso / (Number(altura/100) * Number(altura/100))).toFixed(2);
