@@ -14,3 +14,33 @@
 
 // node imc.js 67 173
 // Debería mostrar por consola "Normal"
+
+
+const args = process.argv.slice(2);
+
+function fIMC (peso, altura) {
+    if (!peso || !altura){
+        return `Faltan parámetros. 
+        Para ejecutar correctamente el cálculo
+        debe indicar en este orden "peso y altura"`
+    }
+
+    let imc = (peso / (Number(altura/100) * Number(altura/100))).toFixed(2);
+
+    if (imc <= 18.5) {
+        return "el peso es muy bajo"
+    } else {
+        if (imc <= 25) {
+            return "el peso es normal"
+        } else {
+            if (imc <= 30){
+                return "hay sobrepeso"
+            } else {
+                return "problemas de obesidad"
+            }
+        }
+    }
+}
+
+
+console.log(fIMC(args[0], args[1]));
