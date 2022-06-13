@@ -2,6 +2,22 @@
 
 // Acepta NIEs (Extranjeros con X, Y o Z al principio)
 
+// Para ejecutar este script pasándoles los DNIs del archivo dnis.txt y guardar la respuesta en un archivo de text "resultado.txt"
+// cat dnis.txt | xargs -I % node check-dni.js % >> resultado.txt
+
+const args = process.argv.slice(2);
+const dni = args[0];
+
+const validacionDNI = validateDNI(dni);
+
+if(validacionDNI){
+    respuesta =  "El formato del DNI/NIE es correcto";
+}else{
+    respuesta =  "El formato del DNI/NIE no es válido";
+}
+
+console.log(respuesta);
+
 /**
  * 
  * @param {string} dni 
@@ -43,4 +59,4 @@
 // node check-dni 00742411V
 // Debería devolver un mensaje por consola "El dni introducido es válido"
 
-console.log(process.argv[3]);
+//console.log(process.argv[3]);
