@@ -1,0 +1,6 @@
+1. Escribe un comando usando 'ls' que muestre todos los ficheros de este directorio que tienen la extensión 'txt'
+2. Escribe un comando usando 'grep' que muestre todos los dnis que contienen la subcadena "06" del fichero dnis.txt
+3. Usa el comando 'cat' para mostrar el contenido del fichero dnis.txt
+4. Escribe un comando usando 'head' que mustre solo la primera línea del fichero dnis.txt
+---- Implementa el ejercicio de script-----
+5. BONUS: Explora como usar el comando xargs. http://systemadmin.es/2009/04/uso-de-xargs-herramientas-unix-ii . Después, usa el comando para comprobar todos los dnis del fichero dnis.txt con el script creado. Ayuda: https://unix.stackexchange.com/questions/3593/using-xargs-with-input-from-a-file
